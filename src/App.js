@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App" >
       <div className="container">
+        <h1 className="text-start">Post-it</h1>
         <div class="container xl d-flex flex-wrap">
           <Form agregarNota={agregarNota}/>
           <ListaNotas notas={notas}/> 

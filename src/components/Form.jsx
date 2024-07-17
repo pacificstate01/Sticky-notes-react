@@ -50,9 +50,9 @@ export const Form = ({agregarNota}) =>{
           checked={importante}
           onChange={(e) => setImportante(e.target.checked)}
         />
-        <label className="form-check-label">Importante !</label>
+        <label className="form-check-label">Importante!</label>
       </div>
-      <button className="btn btn-success m-3 rounded" id="add">
+      <button className="btn btn-success m-3 rounded boton" id="add">
         Agregar
       </button>
     </form>
