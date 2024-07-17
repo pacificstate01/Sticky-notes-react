@@ -5,7 +5,7 @@
     transition: transform 0.3s ease-in-out; 
 }
 .note:hover {
-    transform: rotate(-6deg); 
+    transform: rotate(-12deg); 
 }
 .noteimp:hover {
     transform: rotate(6deg); 
