@@ -5,8 +5,8 @@ export const Form = ({agregarNota}) =>{
   const [importante, setImportante] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (descripcion.trim() === "") {
-      alert("Se requiere una descripcion");
+    if (descripcion.trim() === "" || titulo.trim() === "" ) {
+      alert("Ingrese informacion a los campos");
       return;
     }
     const nuevaNota = {
