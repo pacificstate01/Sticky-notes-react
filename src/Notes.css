@@ -1,14 +1,20 @@
-.note,.noteimp {
+.note{
     width:18rem;
     min-height:18rem;
     transform: rotate(-3deg);
+    transition: transform 0.3s ease-in-out; 
+}
+.noteimp{
+    width:18rem;
+    min-height:18rem;
+    transform: rotate(3deg);
     transition: transform 0.3s ease-in-out; 
 }
 .note:hover {
     transform: rotate(-12deg); 
 }
 .noteimp:hover {
-    transform: rotate(6deg); 
+    transform: rotate(12deg); 
 }
 .card-body {
     position: relative;

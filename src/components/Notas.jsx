@@ -1,14 +1,17 @@
 import React from 'react';
-export const Notas = ({nota}) =>{
+export const Notas = ({nota,onDelete}) =>{
     const { titulo, descripcion, importante } = nota;
     const important = importante;
-    if(important === true){
+    const handleDelete = () => {
+        onDelete(titulo); 
+      };
+    if(important){
         return(
             <div className="card text-center text-bg-danger mb-3 p-3 m-3 noteimp">
                 <div className="card-body d-flex flex-column align-items-center">
                   <h5 className="card-title">{titulo}</h5>
                   <p className='card-text font-monospace text-left text-break'>{descripcion}</p>
-                  <button className="btn-close"></button>
+                  <button onClick={handleDelete} className="btn-close"></button>
                 </div>
                 
             </div>
@@ -19,7 +22,7 @@ export const Notas = ({nota}) =>{
                 <div className="card-body d-flex flex-column align-items-center">
                     <h5 className="card-title">{titulo}</h5>
                     <p className='card-text font-monospace text-left text-break'>{descripcion}</p>
-                    <button className="btn-close"></button>
+                    <button onClick={handleDelete} className="btn-close"></button>
                 </div>
             </div>
         );

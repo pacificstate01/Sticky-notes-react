@@ -30,7 +30,6 @@ export const Form = ({agregarNota}) =>{
         className="form-control m-2 rounded font-monospace"
         type="text"
         placeholder="Titulo"
-        id="title"
         value={titulo}
         onChange={(e) => setTitulo(e.target.value)}
       />
@@ -38,7 +37,6 @@ export const Form = ({agregarNota}) =>{
         className="form-control m-2 rounded font-monospace"
         type="text"
         placeholder="Descripcion"
-        id="description"
         value={descripcion}
         onChange={(e) => setDescripcion(e.target.value)}
       />
