@@ -1,0 +1,27 @@
+.note {
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease-in-out; 
+}
+.noteimp {
+    transform: rotate(3deg);
+    transition: transform 0.3s ease-in-out; 
+}
+.note:hover {
+    transform: rotate(-6deg); 
+}
+.noteimp:hover {
+    transform: rotate(6deg); 
+}
+.card-body {
+    position: relative;
+}
+
+.btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.impo{
+    padding-top: 1rem;
+}
