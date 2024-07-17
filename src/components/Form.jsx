@@ -27,7 +27,7 @@ export const Form = ({agregarNota}) =>{
   return (
     <form className="input-group d-flex mb-5" id="form" onSubmit={handleSubmit}>
       <input
-        className="form-control m-2 rounded"
+        className="form-control m-2 rounded font-monospace"
         type="text"
         placeholder="Titulo"
         id="title"
@@ -35,7 +35,7 @@ export const Form = ({agregarNota}) =>{
         onChange={(e) => setTitulo(e.target.value)}
       />
       <input
-        className="form-control m-2 rounded"
+        className="form-control m-2 rounded font-monospace"
         type="text"
         placeholder="Descripcion"
         id="description"

@@ -1,6 +1,6 @@
 .note,.noteimp {
     width:18rem;
-    height:20rem;
+    min-height:18rem;
     transform: rotate(-3deg);
     transition: transform 0.3s ease-in-out; 
 }
