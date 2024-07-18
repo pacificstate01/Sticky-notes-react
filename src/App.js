@@ -19,7 +19,7 @@ function App() {
     <div className="App" >
       <div className="container">
         <h1 className="text-start">Post-it</h1>
-        <div class="container xl d-flex flex-wrap">
+        <div className="container xl d-flex flex-wrap">
           <Form agregarNota={agregarNota} notas={notas}/>
           <ListaNotas notas={notas} onDelete={Delete}/>
         </div>
