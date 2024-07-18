@@ -1,5 +1,5 @@
 import { useState } from 'react';
-export const Form = ({agregarNota}) =>{
+export const Form = ({agregarNota,notas}) =>{
   const [titulo, setTitulo] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [importante, setImportante] = useState(false);
@@ -9,14 +9,20 @@ export const Form = ({agregarNota}) =>{
       alert("Ingrese informacion a los campos");
       return;
     }
-    const nuevaNota = {
-      titulo,
-      descripcion,
-      importante,
-    };
-    agregarNota(nuevaNota);
-    alert("Nota agregada");
-    limpiar_campos();
+    const title = notas.find(e => e.titulo === titulo);
+    if(title){
+      alert("ya existe el titulo");
+      return;
+    }
+      const nuevaNota = {
+        titulo,
+        descripcion,
+        importante,
+      };
+      agregarNota(nuevaNota);
+      alert("Nota agregada");
+      limpiar_campos();
+
   };
   const handleTituloChange = (e) => {
     setTitulo(e.target.value);
