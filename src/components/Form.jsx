@@ -18,7 +18,18 @@ export const Form = ({agregarNota}) =>{
     alert("Nota agregada");
     limpiar_campos();
   };
-
+  const handleTituloChange = (e) => {
+    setTitulo(e.target.value);
+  };
+  
+  const handleDescripcionChange = (e) => {
+    setDescripcion(e.target.value);
+  };
+  
+  const handleImportanteChange = (e) => {
+    setImportante(e.target.checked);
+  };
+  
   const limpiar_campos = () => {
     setTitulo("");
     setDescripcion("");
@@ -31,14 +42,14 @@ export const Form = ({agregarNota}) =>{
         type="text"
         placeholder="Titulo"
         value={titulo}
-        onChange={(e) => setTitulo(e.target.value)}
+        onChange={handleTituloChange}
       />
       <input
         className="form-control m-2 rounded font-monospace"
         type="text"
         placeholder="Descripcion"
         value={descripcion}
-        onChange={(e) => setDescripcion(e.target.value)}
+        onChange={handleDescripcionChange}
       />
       <div className="form-check m-2 impo">
         <input
@@ -46,7 +57,7 @@ export const Form = ({agregarNota}) =>{
           type="checkbox"
           id="check"
           checked={importante}
-          onChange={(e) => setImportante(e.target.checked)}
+          onChange={handleImportanteChange}
         />
         <label className="form-check-label">Importante!</label>
       </div>
